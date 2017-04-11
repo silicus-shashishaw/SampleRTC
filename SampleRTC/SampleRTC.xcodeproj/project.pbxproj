@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276D0C76010BADF8129A2E2E /* libPods-SampleRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D44AC9E2AD2A538AC9577EF6 /* libPods-SampleRTC.a */; };
 		2D73B9D01E9CA9B8006D65D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D73B9CF1E9CA9B8006D65D1 /* main.m */; };
 		2D73B9D31E9CA9B8006D65D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D73B9D21E9CA9B8006D65D1 /* AppDelegate.m */; };
 		2D73B9D61E9CA9B8006D65D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D73B9D51E9CA9B8006D65D1 /* ViewController.m */; };
@@ -26,6 +27,9 @@
 		2D73B9DA1E9CA9B8006D65D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D73B9DD1E9CA9B8006D65D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D73B9DF1E9CA9B8006D65D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6484CFFD5051CE1D7051BB29 /* Pods-SampleRTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleRTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleRTC/Pods-SampleRTC.release.xcconfig"; sourceTree = "<group>"; };
+		674A92B27D4E75C75E205711 /* Pods-SampleRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleRTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleRTC/Pods-SampleRTC.debug.xcconfig"; sourceTree = "<group>"; };
+		D44AC9E2AD2A538AC9577EF6 /* libPods-SampleRTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleRTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276D0C76010BADF8129A2E2E /* libPods-SampleRTC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A9FD8A0B7F8743CEB715A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				674A92B27D4E75C75E205711 /* Pods-SampleRTC.debug.xcconfig */,
+				6484CFFD5051CE1D7051BB29 /* Pods-SampleRTC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1C9AA102A863F7D26AA23D27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D44AC9E2AD2A538AC9577EF6 /* libPods-SampleRTC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D73B9C21E9CA9B7006D65D1 = {
 			isa = PBXGroup;
 			children = (
 				2D73B9CD1E9CA9B8006D65D1 /* SampleRTC */,
 				2D73B9CC1E9CA9B8006D65D1 /* Products */,
+				19A9FD8A0B7F8743CEB715A0 /* Pods */,
+				1C9AA102A863F7D26AA23D27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D73B9E21E9CA9B8006D65D1 /* Build configuration list for PBXNativeTarget "SampleRTC" */;
 			buildPhases = (
+				9B2A2C780C09D31928C356BA /* 📦 Check Pods Manifest.lock */,
 				2D73B9C71E9CA9B7006D65D1 /* Sources */,
 				2D73B9C81E9CA9B7006D65D1 /* Frameworks */,
 				2D73B9C91E9CA9B7006D65D1 /* Resources */,
+				7EDA6A044FA64F401622204B /* 📦 Embed Pods Frameworks */,
+				DE2EA9FB749B52F421EFD9C1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EDA6A044FA64F401622204B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleRTC/Pods-SampleRTC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B2A2C780C09D31928C356BA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2EA9FB749B52F421EFD9C1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleRTC/Pods-SampleRTC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D73B9C71E9CA9B7006D65D1 /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		2D73B9E31E9CA9B8006D65D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 674A92B27D4E75C75E205711 /* Pods-SampleRTC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleRTC/Info.plist;
@@ -279,6 +355,7 @@
 		};
 		2D73B9E41E9CA9B8006D65D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6484CFFD5051CE1D7051BB29 /* Pods-SampleRTC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleRTC/Info.plist;
